@@ -1,0 +1,3 @@
+1. Postman gửi dữ liệu trực tiếp đến Server mà không đi qua trình duyệt, nên nó bỏ qua hoàn toàn mọi lớp chặn của JavaScript. Nếu Backend không có bộ kiểm soát riêng, dữ liệu rác sẽ lọt vào Database.
+2. Chọn @NotBlank.
+Lý do: @NotBlank sẽ tự động cắt bỏ khoảng trắng trước khi kiểm tra. Nếu chuỗi chỉ toàn dấu cách, nó sẽ coi là chuỗi rỗng và báo lỗi. @NotNull và @NotEmpty đều sẽ bị đánh lừa bởi khoảng trắng.
